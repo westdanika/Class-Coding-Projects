@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+    <title>Trainee Project 3 Number Sequences</title>
+    <link rel = "stylesheet" href = "robot.css">
+</head>
+<body>
+    <div>
+        <div class = "numberSequenceCont">
+            <div class = "numberSequence">
+                <!-- Display Random Number Sequence Here! -->
+                <!-- Maybe use JavaScript to generate a random number starting point -->
+                <!-- Then generate a random number to add by -->
+                <!-- Then display four numbers, but hide the third number until check answer button is clicked -->
+                <div id = "numOne">
+                    <!-- Get Random Number and Display First Number -->
+                    <!-- Get Random Number and Store Under Variable for Adding -->
+                </div>
+                <div id = "numTwo">
+                    <!-- Get First Number and Add Specified Random Number and Display Second Number -->
+                </div>
+                <div id = "numThree">
+                    <!-- Get Second Number and Add Specified Random Number and Display Third Number -->
+                    <!-- HIDE THIS NUMBER WITH JAVASCRIPT UNTIL CHECK ANSWER BUTTON IS CLICKED -->
+                </div>
+                <div id = "numFour">
+                    <!-- Get Third Number and Add Specified Random Number and Display Fourth Number -->
+                </div>
+            </div>
+        </div>
+        <div class = "numberGuessCont">
+            <div class = "userGuessCont">
+                <div class = "questionText">
+                    <h2>Fill In The Missing Number</h2>
+                </div>
+                <div class = "userGuessInput">
+                    <!-- User Input Box Here -->
+                    <input type ="number" id ="userNum" value = " ">
+                </div>
+                <div class = "checkButton">
+                    <!-- Check Answer Button Here -->
+                </div>
+                <div class = "newProblemButten">
+                    <!-- New Problem Button Here -->
+                </div>
+            </div>
+            <div class = "userGuessData">
+                <div class = "userDataTable">
+                    <!-- Table Here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const getRandomNumber = (min, max) => {
+            return randNum = Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        // static var addNum = 0;
+        // function addNumSequence = (firstNum, addNum) => {
+        //     return randNumSequence = firstNum + addNum;
+        // }
+        var numSequence = {
+            firstNum: function () {
+                return getRandomNumber(0, 100);
+            },
+            addingNum: function () {
+                return getRandomNumber(0, 100);
+            },
+            secondNum: function () {
+                return this.firstNum + this.addingNum;
+            },
+            thirdNum: function () {
+                return this.secondNum + this.addingNum;
+            },
+            fourthNum: function () {
+                return this.thirdNum + this.addingNum;
+            }
+        }
+        function checkAnswer (userNum, missingNum) {
+            if(userNum == missingNum) {
+                return answer = true;
+            } else {
+                return answer = false;
+            }
+
+        }
+        document.getElementById(numOne).onclick = function () {
+            numSequence.firstNum();
+        }
+        document.getElementById(numTwo).onclick = function () {
+            numSequence.secondNum();
+        }
+        document.getElementById(numThree).onclick = function () {
+            numSequence.thirdNum();
+        }
+        document.getElementById(numFour).onclick = function () {
+            numSequence.fourthNum();
+        }
+        document.getElementById(numThree).style.display = "none";
+        document.getElementById(userNum).value = "something?";
+
+    </script>
+</body>
