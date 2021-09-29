@@ -1,0 +1,66 @@
+/* General Styles */
+.whiteText {
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+.whiteText > p {
+    margin: 0px;
+}
+.greenBox {
+    background-color: lightgreen;
+    overflow: auto;
+}
+.box {
+    background-color: ivory;
+    border: 3px solid tan;
+    width: 400px;
+    height: 200px;
+}
+.boxText > p {
+    margin: 0px;
+}
+
+/* Row One Styles */
+.rowOne > .greenBox {
+    padding: 1% 12%;
+}
+.rowOne > .greenBox > .boxOne {
+    float: left;
+}
+.rowOne > .greenBox > .boxTwo {
+    float: right;
+}
+
+/* Row Two Styles */
+.rowTwo > .greenBox {
+    padding: 1% 6%;
+}
+.rowTwo > .greenBox > .box {
+    display: inline-block;
+    background-color: lightblue;
+}
+.rowTwo > .greenBox > .boxThree {
+    margin: 0 6.5%;
+}
+.rowTwo > .greenBox > .boxFour {
+    margin: 0 6.5%;
+}
+
+/* Row Three Styles */
+.rowThree > .greenBox {
+    position: relative;
+    height: 235px;
+}
+.rowThree > .greenBox > .box {
+    background-color: lightblue;
+}
+.rowThree > .greenBox > .boxFive {
+    position: absolute;
+    left: 12%;
+    top: 6%;
+}
+.rowThree > .greenBox > .boxSix {
+    position: absolute;
+    right: 12%;
+    top: 6%;
+}

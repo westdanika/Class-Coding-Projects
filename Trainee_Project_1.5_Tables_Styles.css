@@ -1,0 +1,76 @@
+/* General Styles */
+.whiteText {
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+.whiteText > p {
+    margin: 0px;
+}
+.greenBox {
+    background-color: lightgreen;
+    overflow: auto;
+}
+.cell{
+    background-color: ivory;
+    border: 1px solid black;
+    width: 165px;
+    height: 30px;
+}
+.cell > p {
+    margin: 5px;
+}
+
+/* Table Styles */
+
+/* Row One */
+.rowOne > .greenBox > .table {
+    padding: 15% 5% 0% 11%;
+}
+.rowOne > .greenBox > .table > .row > .cell {
+    float: left;
+    width: 18%;
+}
+
+/* Row Two */
+.rowTwo > .greenBox > .table {
+    /* margin: 50px; */
+    padding: 15% 5% .2% 12%;
+}
+.rowTwo > .greenBox > .table > .row {
+    display: inline-block;
+    margin: -2px;
+}
+
+/* Row Three */
+.rowThree > .greenBox {
+    position: relative;
+    height: 350px;
+}
+.rowThree > .greenBox > .table {
+    padding: 10px;
+}
+.rowThree > .greenBox > .table > .tableRowOne {
+    position: absolute;
+    bottom: 0px;
+    left: 150px;
+}
+.rowThree > .greenBox > .table > .tableRowTwo {
+    position: absolute;
+    bottom: 0px;
+    left: 315px;
+}
+.rowThree > .greenBox > .table > .tableRowThree {
+    position: absolute;
+    bottom: 0px;
+    left: 480px;
+}
+.rowThree > .greenBox > .table > .tableRowFour {
+    position: absolute;
+    bottom: 0px;
+    left: 645px;
+}
+.rowThree > .greenBox > .table > .tableRowFive {
+    position: absolute;
+    bottom: 0px;
+    left: 810px;
+}
